@@ -8,11 +8,29 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: #121212;
+    background-image: 
+        linear-gradient(
+            rgba(255, 255, 255, 0.05) 1px, 
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg, 
+            rgba(255, 255, 255, 0.05) 1px, 
+            transparent 1px
+        );
+    background-size: 20px 20px;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 header {
@@ -23,17 +41,20 @@ header {
 .logo {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 h1 {
     font-family: 'Pacifico', cursive;
-    color: var(--accent-color);
+    color: #ffffff;
     margin: 0;
+    white-space: nowrap;
 }
 
 .intro {
     font-size: 1.2rem;
     margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .carousel {
@@ -105,3 +126,366 @@ footer {
         padding: 0.5rem;
     }
 }
+
+.personal-section {
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.sections-container {
+    display: flex !important;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.section-block {
+    flex: 1;
+    min-width: 0; /* 防止内容溢出 */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    height: fit-content;
+}
+
+/* 标题样式 */
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 游戏板块样式 */
+.game-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;  /* 再次减小间距 */
+    max-height: 480px;  /* 适当增加高度 */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.game-card {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.game-card img {
+    height: 100px;  /* 稍微调整图片高度 */
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* 添加卡片悬停动画 */
+.game-card:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: -2px 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* 优化文字样式 */
+.game-card h3 {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+.game-card p {
+    font-size: 0.85em;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* 穿搭板块样式 */
+.style-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.style-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.style-item img {
+    width: 100%;
+    display: block;
+}
+
+/* 音乐板块样式 */
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.music-item iframe {
+    width: 100%;
+    max-width: 330px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+    .sections-container {
+        flex-direction: column;
+    }
+
+    .section-block {
+        width: 100%;
+    }
+}
+
+/* 添加一些悬停效果 */
+.section-block:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* 为每个板块添加不同的边框颜色 */
+.games {
+    border-left: 4px solid #ff6b6b;
+}
+
+.style {
+    border-left: 4px solid #4ecdc4;
+}
+
+.music {
+    border-left: 4px solid #ffe66d;
+}
+
+.interests {
+    display: flex;
+    justify-content: center;
+    gap: 40px;  /* 调整间距 */
+    margin: 20px 0;
+    padding: 15px 0;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.interest-item .icon {
+    font-size: 1.5em;
+}
+
+.interest-item .text {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+/* Midjourney 作品集样式 */
+.artwork-grid {
+    display: flex; /* 使用 flexbox 布局 */
+    flex-direction: row; /* 横向排列 */
+    gap: 20px; /* 图片间距 */
+    overflow-x: auto; /* 允许横向滚动 */
+    padding: 10px 0; /* 上下内边距 */
+}
+
+/* 自定义滚动条样式 */
+.artwork-grid::-webkit-scrollbar {
+    height: 8px; /* 滚动条高度 */
+}
+
+.artwork-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* 滚动条轨道背景 */
+    border-radius: 10px; /* 圆角 */
+}
+
+.artwork-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* 滚动条滑块颜色 */
+    border-radius: 10px; /* 圆角 */
+}
+
+.artwork-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5); /* 滚动条滑块悬停颜色 */
+}
+
+/* 作品项样式 */
+.artwork-item {
+    min-width: calc(50% - 10px); /* 每组容纳 2 张图片，减去间距 */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 10px; /* 添加内边距 */
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px); /* 悬停效果 */
+}
+
+.artwork-item img {
+    width: 100%; /* 图片宽度100% */
+    height: auto; /* 高度自适应 */
+    object-fit: cover; /* 保持比例 */
+}
+
+/* 添加图片点击放大效果 */
+.artwork-item.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.artwork-item.expanded img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 修改 prompt 的样式 */
+.artwork-info .prompt {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+    color: #ffffff; /* 确保颜色可见 */
+    margin-bottom: 8px;
+    margin-left: 10px; /* 增加左边距 */
+}
+
+/* 书籍板块样式 */
+.book-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* 保持与其他板块一致的滚动条样式 */
+.book-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.book-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.book-grid::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.book-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* 书籍卡片样式 */
+.book-card {
+    display: flex;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.book-card img {
+    width: 56px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h3 {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    color: #ffffff;
+}
+
+.book-info .author {
+    font-size: 0.9em;
+    color: #a8a8a8;
+    margin: 0 0 8px 0;
+}
+
+.book-info .description {
+    font-size: 0.85em;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* 个人简介卡片样式 */
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto; /* 居中显示 */
+    max-width: 500px; /* 设置最大宽度为 500px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.profile-card:hover {
+    transform: translateY(-5px); /* 悬停效果 */
+}
+
+.profile-content {
+    flex: 1; /* 文字部分占据剩余空间 */
+    text-align: left; /* 文字左对齐 */
+}
+
+.profile-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* 标题颜色 */
+}
+
+.profile-card p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8); /* 文字颜色 */
+    line-height: 1.4;
+    margin: 5px 0; /* 增加上下间距 */
+}
+
+/* 头像样式 */
+.avatar {
+    width: 80px; /* 头像宽度 */
+    height: 80px; /* 头像高度 */
+    border-radius: 50%; /* 圆形 */
+    overflow: hidden; /* 超出部分隐藏 */
+    margin-left: 15px; /* 增加左边距 */
+}
+
+.avatar img {
+    width: 100%; /* 头像宽度100% */
+    height: 100%; /* 头像高度100% */
+    object-fit: cover; /* 保持比例 */
+}
+

@@ -4,45 +4,271 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>薯片的小天地</title>
+    <title>Chip's space</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">🥔</div>
-        <h1>薯片的包装袋</h1>
-        <p class="intro">你好，让我们去码头整点薯片</p>
+        <h1>Chip's mini world </h1>
+        <div class="profile-card">
+            <div class="profile-content">
+                <h2>Something about me..</h2>
+                <p><strong>MBTI:</strong> INFP</p>
+                <p><strong>Zodiac sign:</strong> Sagittarius</p>
+                <p><strong>Signs:</strong> Life is full of passion !</p>
+                <p><strong>Undergraduate:</strong> Nankai University</p>
+                <p><strong>Master:</strong> The National University Of Singapore</p>
+            </div>
+            <div class="avatar">
+                <img src="img/avatar.jpg" alt="个人头像">
+            </div>
+        </div>
     </header>
 
     <main>
-        <div class="carousel">
-            <button class="carousel-btn prev">❮</button>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="img1.jpg" alt="旅行照片">
-                    <p class="caption">美好的旅行时光</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="img2.jpg" alt="生活照片">
-                    <p class="caption">日常生活</p>
-                </div>
-                <div class="carousel-slide">
-                    <img src="img3.jpg" alt="爱好照片">
-                    <p class="caption">我的爱好</p>
-                </div>
-                <!-- 更多轮播图片 -->
+        <div class="interests">
+            <div class="interest-item">
+                <span class="icon">✈️</span>
+                <span class="text">旅行</span>
             </div>
-            <button class="carousel-btn next">❯</button>
-            <div class="carousel-dots"></div>
+            <div class="interest-item">
+                <span class="icon">🌟</span>
+                <span class="text">生活</span>
+            </div>
+            <div class="interest-item">
+                <span class="icon">❤️</span>
+                <span class="text">爱好</span>
+            </div>
         </div>
     </main>
 
+    <section class="personal-section">
+        <div class="sections-container">
+            <!-- 游戏板块 -->
+            <div class="section-block games">
+                <h2>My Favorite Games</h2>
+                <div class="game-grid">
+                    <!-- 第一个游戏 -->
+                    <div class="game-card">
+                        <img src="img/idv1.jpg" alt="第五人格">
+                        <img src="img/idv2.jpg" alt="第五人格">
+                        <img src="img/idv3.jpg" alt="第五人格">
+                        <h3>The Identity V</h3>
+                        <p>My favorite modes: Duo Hunters/Mimic Games; </p>
+                    </div>
+
+                    <!-- 第二个游戏 -->
+                    <div class="game-card">
+                        <img src="img/Tactics1.jpg" alt="金铲铲之战">
+                        <img src="img/Tactics2.jpg" alt="金铲铲之战">
+                        <img src="img/Tactics3.jpg" alt="金铲铲之战">
+                        <img src="img/Tactics4.jpg" alt="金铲铲之战">
+                        <img src="img/Tactics5.jpg" alt="金铲铲之战">
+                        <h3>Teamfight Tactics</h3>
+                        <p> I love Jinx in 《Arcane:League of Legends》；Pain through her life but she saves herself and hug the world.</p>
+                    </div>
+
+                    <!-- 第三个游戏 -->
+                    <div class="game-card">
+                        <img src="img/Honor1.jpg" alt="王者荣耀">
+                        <img src="img/Honor2.jpg" alt="王者荣耀">
+                        <img src="img/Honor3.jpg" alt="王者荣耀">
+                        <h3>Honor of Kings</h3>
+                        <p>Yao/Mermaid/Angela/Toro/Xiaoqiao/Diaochan</p>
+                    </div>
+
+                    <!-- 第四个游戏 -->
+                    <div class="game-card">
+                        <img src="img/Eggy1.jpg" alt="蛋仔派对">
+                        <img src="img/Eggy2.jpg" alt="蛋仔派对">
+                        <img src="img/Eggy3.jpg" alt="蛋仔派对">
+                        <img src="img/Eggy4.jpg" alt="蛋仔派对">
+                        <img src="img/Eggy5.jpg" alt="蛋仔派对">
+                        <h3>Eggy Party</h3>
+                        <p>Dsigning maps in Eggy world is interesting.And finding the best way to finish the map is a challenge.Also I love finding firends and enjoy the virtual scenery together.</p>
+                    </div>
+
+                    <!-- 新增第五个游戏 -->
+                    <div class="game-card">
+                        <img src="img/kingdoms.jpg" alt="三国杀">
+                        <h3>Legends of the 3 kingdoms</h3>
+                        <p>1 V 1/Military Struggle Mode/National War Mode</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 书籍板块 -->
+            <div class="section-block books">
+                <h2>My Books</h2>
+                <div class="book-grid">
+                    <!-- 第一本书 -->
+                    <div class="book-card">
+                        <img src="img/book1.jpg" alt="书籍1">
+                        <div class="book-info">
+                            <h3>Meditation</h3>
+                            <p class="author">Christophe André</p>
+                            <p class="description">When im depressed or feeling much noise in mind,reading it makes me relax and touch the moment,live in the moment..</p>
+                        </div>
+                    </div>
+
+                    <!-- 第二本书 -->
+                    <div class="book-card">
+                        <img src="img/book2.jpg" alt="书籍2">
+                        <div class="book-info">
+                            <h3>The Power of Now</h3>
+                            <p class="author">Eckhart Tolle</p>
+                            <p class="description">Focus on your body your breath and imagine u are embraced by warm and white light</p>
+                        </div>
+                    </div>
+
+                    <!-- 第三本书 -->
+                    <div class="book-card">
+                        <img src="img/book3.jpg" alt="书籍3">
+                        <div class="book-info">
+                            <h3>Sahara Stories</h3>
+                            <p class="author">Sanmao</p>
+                            <p class="description">Her experience opens a totally new world for me;people's lifestyle,culture in Sahara is quite different from us living in the modern city...although they are lack of medical care,their heart is warm.</p>
+                        </div>
+                    </div>
+
+                    <!-- 第四本书 -->
+                    <div class="book-card">
+                        <img src="img/book4.jpg" alt="书籍4">
+                        <div class="book-info">
+                            <h3>Flowers for Algernon</h3>
+                            <p class="author">Daniel Keyes</p>
+                            <p class="description">A man gain high intelligence and lose it at last;Facing difficulties through life needs courage,maybe intelligence has 2 sides,one side lets human have the ability to feel emotions,but the other side it also increases comparison,conflicts,discrimination which leads to less happiness. </p>
+                        </div>
+                    </div>
+
+                    <!-- 第五本书 -->
+                    <div class="book-card">
+                        <img src="img/book5.jpg" alt="书籍5">
+                        <div class="book-info">
+                            <h3>The Three-Body Problem</h3>
+                            <p class="author">Liu Cixin</p>
+                            <p class="description">So many great imaginations in science and physics!!That's really amazing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AIGC板块 -->
+            <div class="section-block midjourney">
+                <h2>My Midjourney</h2>
+                <div class="artwork-grid">
+                    <div class="artwork-item">
+                        <img src="img/midjourney1.jpg" alt="Midjourney作品1">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A super cute pink hair girl,anime.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney2.jpg" alt="Midjourney作品2">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A girl,roof,futuristic city skyline at sunset.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney3.jpg" alt="Midjourney作品3">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney4.jpg" alt="Midjourney作品4">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney5.jpg" alt="Midjourney作品5">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney6.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney7.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney8.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney9.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney10.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney11.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney12.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney13.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="artwork-item">
+                        <img src="img/midjourney14.jpg" alt="Midjourney作品6">
+                        <div class="artwork-info">
+                            <p class="prompt"> Prompt: A pink hair girl,fireworks,night.</p>
+                            
+                        </div>
+                    </div>
+                    <!-- 添加更多作品 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>来找我玩吧~</p>
+        <p>My wechat:15636312199</p>
+        <p>My Rednote:鱼鱼的创意社</p>
+        <p>My BiliBili UID:474676174</p>
         <div class="social-links">
-            <a href="#" class="social-icon">📱</a>
+            <a href="#" class="social-icon">��</a>
         </div>
     </footer>
 </body>
