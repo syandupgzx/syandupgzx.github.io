@@ -291,6 +291,20 @@ h2 {
     color: #ffffff;
 }
 
+.interest-item a {
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    text-decoration: none; /* 去掉下划线 */
+    color: inherit; /* 继承父元素的颜色 */
+    padding: 10px; /* 添加内边距 */
+    border-radius: 10px; /* 圆角 */
+    transition: background 0.3s; /* 添加过渡效果 */
+}
+
+.interest-item a:hover {
+    background: rgba(255, 255, 255, 0.1); /* 悬停效果 */
+}
+
 /* Midjourney 作品集样式 */
 .artwork-grid {
     display: flex; /* 使用 flexbox 布局 */
@@ -476,8 +490,8 @@ h2 {
 
 /* 头像样式 */
 .avatar {
-    width: 80px; /* 头像宽度 */
-    height: 80px; /* 头像高度 */
+    width: 100px; /* 增加头像宽度 */
+    height: 100px; /* 增加头像高度 */
     border-radius: 50%; /* 圆形 */
     overflow: hidden; /* 超出部分隐藏 */
     margin-left: 15px; /* 增加左边距 */
