@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行</title>
+    <style>
+        body {
+            background-color: #121212; /* 深色背景 */
+            color: white; /* 文字颜色 */
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* 优雅的衬线字体 */
+            text-align: center; /* 文字居中 */
+            margin: 0; /* 去掉默认外边距 */
+            padding: 20px; /* 添加内边距 */
+        }
+        h1 {
+            font-family: Georgia, Times, "Times New Roman", serif; /* 优雅的正文字体 */
+            font-size: 1.4em; /* 增大正文字号 */
+            font-style: italic; /* 使用斜体 */
+            margin-bottom: 40px; /* 增加段落间距 */
+            opacity: 0.9; /* 轻微透明效果 */
+            
+        }
+        p {
+            font-family: Georgia, Times, "Times New Roman", serif; /* 优雅的正文字体 */
+            font-size: 1.4em; /* 增大正文字号 */
+            font-style: italic; /* 使用斜体 */
+            margin-bottom: 40px; /* 增加段落间距 */
+            opacity: 0.9; /* 轻微透明效果 */
+        }
+        .city-gallery {
+            display: flex; /* 使用flex布局 */
+            flex-wrap: wrap; /* 允许换行 */
+            justify-content: center; /* 居中对齐 */
+            padding: 20px; /* 添加内边距 */
+        }
+        .city-item {
+            display: flex; /* 使用flex布局 */
+            align-items: center; /* 垂直居中对齐 */
+            margin: 15px; /* 增加卡片间距 */
+            border: 2px solid rgba(255, 255, 255, 0.5); /* 半透明白色边框 */
+            border-radius: 10px; /* 圆角边框 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            transition: transform 0.3s; /* 添加过渡效果 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); /* 渐变背景 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* 添加阴影 */
+            width: 300px; /* 统一卡片宽度 */
+        }
+        .city-item:hover {
+            transform: translateY(-5px); /* 向上浮动效果 */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* 悬停时加深阴影 */
+        }
+        img {
+            width: 100px; /* 设置图片宽度 */
+            height: 100px; /* 设置图片高度 */
+            object-fit: cover; /* 保持图片比例并裁剪 */
+            border-right: 2px solid rgba(255, 255, 255, 0.5); /* 图片右侧边框 */
+            margin-right: 10px; /* 图片与文字之间的间距 */
+        }
+        .city-name {
+            color: white;
+            font-family: Georgia, Times, "Times New Roman", serif; /* 保持与正文一致 */
+            font-weight: 500; /* 调整粗细 */
+            font-size: 1.3em;
+            letter-spacing: 1px; /* 添加字间距 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .city-name small {
+            font-size: 0.8em;
+            opacity: 0.8;
+            font-style: italic;
+            color: #e0e0e0;
+        }
+        a {
+            text-decoration: none; /* 移除链接下划线 */
+            color: inherit; /* 继承父元素颜色 */
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>✧ Perhaps Familiar Places Have Lost Their Wonder ✧</h1>
+    <p>⋆ So venture forth, for your soul yearns to wander ⋆</p>
+
+    <div class="city-gallery">
+        <div class="city-item">
+            <a href="https://b23.tv/ZYCIBf4">
+                <img src="img/city1-thumbnail.jpg" alt="秦皇岛">
+                <span class="city-name">✈ 秦皇岛 | Qinhuangdao<br>
+                    <small>吹着风的海边漫步</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1oS4y1W7AL/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city2-thumbnail.jpg" alt="新加坡">
+                <span class="city-name">🌏 新加坡 | Singapore<br>
+                    <small>留学时光的点点滴滴</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1xS4y1W7F4/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city3-thumbnail.jpg" alt="重庆">
+                <span class="city-name">🏮 重庆 | Chongqing<br>
+                    <small>山城难忘的麻辣火锅</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1ag411b75W/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city4-thumbnail.jpg" alt="巴厘岛">
+                <span class="city-name">🌆 巴厘岛 | Bali Island<br>
+                    <small>三日惊险奇遇</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1hj411s7Rs/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city5-thumbnail.jpg" alt="火山">
+                <span class="city-name">🍵 Bromo | Ijen<br>
+                    <small>一生只去一次的火山</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1bLGteSEXr/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city6-thumbnail.jpg" alt="惠州">
+                <span class="city-name">🌊 惠州 | 西湖、水东巷<br>
+                    <small>湖风轻抚的文艺旅程</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1aSB1YDEyZ/?spm_id_from=333.1387.homepage.video_card.click">
+                <img src="img/city7-thumbnail.jpg" alt="长沙">
+                <span class="city-name">🍃 长沙 | Changsha<br>
+                    <small>橘子洲头的悠然漫步</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1ryBMYbEPi/?spm_id_from=333.1387.homepage.video_card.click">
+                <img src="img/city8-thumbnail.jpg" alt="惠州">
+                <span class="city-name">🌺 惠州 | 南昆山<br>
+                    <small>喂养鸵鸟，品精致人生</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1RY411N721/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city9-thumbnail.jpg" alt="哈尔滨">
+                <span class="city-name">❄️ 哈尔滨 | Harbin<br>
+                    <small>冰雪之城的浪漫冬日</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://www.bilibili.com/video/BV1eXSkY3E9n/?spm_id_from=333.1387.upload.video_card.click">
+                <img src="img/city10-thumbnail.jpg" alt="深圳">
+                <span class="city-name">🌃 深圳 | 欢乐谷<br>
+                    <small>万圣节打卡NPC</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://mp.weixin.qq.com/s/UcgCJOPfWdGOPgJdQfzf8A">
+                <img src="img/city11-thumbnail.jpg" alt="澳门">
+                <span class="city-name">🎲 澳门 | Macau<br>
+                    <small>葡式建筑与美食之旅</small>
+                </span>
+            </a>
+        </div>
+        <div class="city-item">
+            <a href="https://mp.weixin.qq.com/s/wpZZT6r1l6mgFV7ynN4YzQ">
+                <img src="img/city12-thumbnail.jpg" alt="香港">
+                <span class="city-name">🌆 香港 | Hong Kong<br>
+                    <small>维多利亚港的小猪麦兜</small>
+                </span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
